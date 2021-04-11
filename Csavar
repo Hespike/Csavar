@@ -1,0 +1,60 @@
+public class Csavar {
+    private String anyag;
+    private double hossz;
+    private double vastagsag;
+    private int erosseg;
+    private int ar;
+
+    public Csavar(){
+        anyag = "fa";
+        hossz = 50;
+        vastagsag = 3.5;
+        erosseg = 7;
+        ar = 100000;
+    }
+
+    public Csavar(String anyag, double hossz, double vastagsag, int erosseg, int ar){
+        this.anyag = anyag;
+        this.hossz = hossz;
+        this.vastagsag = vastagsag;
+
+        if (erosseg > 0){
+            this.erosseg = erosseg;
+        } else {
+            this.erosseg = 1;
+        }
+
+        if (ar > 1000){
+            this.ar = ar;
+        } else {
+            this.ar = 1000;
+        }
+    }
+
+    public Csavar(String anyag, double hossz, double vastagsag, int erosseg) {
+        this.anyag = anyag;
+        this.hossz = hossz;
+        this.vastagsag = vastagsag;
+        this.erosseg = Math.max(erosseg, 5);
+        this.ar = 5313;
+    }
+    public String getAnyag() {
+        return anyag;
+    }
+
+    public double getHossz() {
+        return hossz;
+    }
+
+    public double getVastagsag() {
+        return vastagsag;
+    }
+
+    public int getErosseg() {
+        return erosseg;
+    }
+
+    public int getAr() {
+        return ar;
+    }
+}
